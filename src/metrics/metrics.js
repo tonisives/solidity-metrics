@@ -233,7 +233,6 @@ ${formatDoppelgangerSection(doppelganger)}`
 - [Scope](#t-scope)
     - [Source Units in Scope](#t-source-Units-in-Scope)
     - [Out of Scope](#t-out-of-scope)
-        - [Excluded Source Units](#t-out-of-scope-excluded-source-units)
         - [Duplicate Source Units](#t-out-of-scope-duplicate-source-units)${doppelgangerToC}
 - [Report Overview](#t-report)
     - [Risk Summary](#t-risk)
@@ -255,7 +254,6 @@ This section lists files that are in scope for the metrics report.
 ### <span id=t-source-Units-in-Scope>Source Units in Scope</span>
 
 Source Units Analyzed: **\`${this.seenFiles.length}\`**<br>
-Source Units in Scope: **\`${this.metrics.length}\`** (**${Math.round(this.metrics.length/this.seenFiles.length * 100)}%**)
 
 | Type | File   | Logic Contracts | Interfaces | Lines | nLines | nSLOC | Comment Lines | Complex. Score | Capabilities |
 | ---- | ------ | --------------- | ---------- | ----- | ------ | ----- | ------------- | -------------- | ------------ | 
@@ -279,18 +277,6 @@ Legend: <a onclick="toggleVisibility('table-legend', this)">[➕]</a>
 
 
 #### <span id=t-out-of-scope>Out of Scope</span>
-
-##### <span id=t-out-of-scope-excluded-source-units>Excluded Source Units</span>
-
-Source Units Excluded: **\`${this.excludedFiles.length}\`**
-
-<a onclick="toggleVisibility('excluded-files', this)">[➕]</a>
-<div id="excluded-files" style="display:none">
-| File   |
-| ------ |
-${this.excludedFiles.length ? this.excludedFiles.map(f => `|${f.replace(this.basePath, "")}|`).join("\n") : "| None |"}
-
-</div>
 
 
 ##### <span id=t-out-of-scope-duplicate-source-units>Duplicate Source Units</span>
