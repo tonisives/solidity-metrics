@@ -226,13 +226,6 @@ ${formatDoppelgangerSection(doppelganger)}`
             : '';
 
         let mdreport_head = `
-[<img width="200" alt="get in touch with Consensys Diligence" src="https://user-images.githubusercontent.com/2865694/56826101-91dcf380-685b-11e9-937c-af49c2510aa0.png">](https://diligence.consensys.net)<br/>
-<sup>
-[[  🌐  ](https://diligence.consensys.net)  [  📩  ](mailto:diligence@consensys.net)  [  🔥  ](https://consensys.github.io/diligence/)]
-</sup><br/><br/>
-
-
-
 # Solidity Metrics for ${this.name}
 
 ## Table of contents
@@ -258,12 +251,6 @@ ${formatDoppelgangerSection(doppelganger)}`
 This section lists files that are in scope for the metrics report. 
 
 - **Project:** \`${this.name}\`
-- **Included Files:** ${`\n` + this.inputFileGlob.replace("{","").replace("}","").split(",").map(g => `    - \`${g}\``).join("\n")}
-- **Excluded Paths:** ${`\n` + this.inputFileGlobExclusions.replace("{","").replace("}","").split(",").map(g => `    - \`${g}\``).join("\n")}
-- **File Limit:** \`${this.inputFileGlobLimit}\`
-    - **Exclude File list Limit:** \`${this.excludeFileGlobLimit}\`
-
-- **Workspace Repository:** \`${this.repoInfo.remote|| "unknown"}\` (\`${this.repoInfo.branch}\`@\`${this.repoInfo.commit}\`)
 
 ### <span id=t-source-Units-in-Scope>Source Units in Scope</span>
 
@@ -452,10 +439,6 @@ ${Object.keys(totals.totals.ast)
 ${suryamdreport} 
 
 </div>
-____
-<sub>
-Thinking about smart contract security? We can provide training, ongoing advice, and smart contract auditing. [Contact us](https://diligence.consensys.net/contact/).
-</sub>
 
 `; 
 
