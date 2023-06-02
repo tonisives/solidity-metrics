@@ -770,6 +770,7 @@ class SolidityFileMetrics {
 }
 
 module.exports = {
-    SolidityMetricsContainer:SolidityMetricsContainer
+    SolidityMetricsContainer:SolidityMetricsContainer,
+    SolidityFileMetrics: SolidityFileMetrics
 };
 
