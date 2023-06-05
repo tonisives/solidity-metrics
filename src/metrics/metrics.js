@@ -226,8 +226,6 @@ ${formatDoppelgangerSection(doppelganger)}`
             : '';
 
         let mdreport_head = `
-# Solidity Metrics for ${this.name}
-
 ## Table of contents
 
 - [Scope](#t-scope)
@@ -246,10 +244,6 @@ ${formatDoppelgangerSection(doppelganger)}`
     - [Totals](#t-totals)
 
 ## <span id=t-scope>Scope</span>
-
-This section lists files that are in scope for the metrics report. 
-
-- **Project:** \`${this.name}\`
 
 ### <span id=t-source-Units-in-Scope>Source Units in Scope</span>
 

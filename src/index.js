@@ -36,7 +36,8 @@ let metrics = new SolidityMetricsContainer("containerName", {
  */
 
 const {SolidityMetricsContainer, SolidityFileMetrics} = require('./metrics/metrics');
+const {exportAsHtml} = require("./metrics/helper")
 
 module.exports = {
-    SolidityMetricsContainer, SolidityFileMetrics
+    SolidityMetricsContainer, SolidityFileMetrics, exportAsHtml
 };
