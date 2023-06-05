@@ -14,10 +14,12 @@ function exportAsHtml(markdownTemplate, jsonData, dotGraphs) {
     let data = {
         markdownTemplate:markdownTemplate,
         jsonData:jsonData,
-        dotGraphs:dotGraphs
+        // can't get dot graphs to work in lambda
+        dotGraphs:process.env.AWS_LAMBDA_FUNCTION_NAME ? [] : dotGraphs
     };
 
-    const packageRoot = __dirname + '/../..';
+    let packageRoot = __dirname + '/../..';
+    if (process.env.AWS_LAMBDA_FUNCTION_NAME) packageRoot = "./";
 
     let result = {'index':'', 'js':[], 'css':[] };
     let srcFiles = [
@@ -26,7 +28,6 @@ function exportAsHtml(markdownTemplate, jsonData, dotGraphs) {
         path.join('js', 'Chart.bundle.min.js'), 
         path.join('js', 'chartjs-plugin-colorschemes.min.js'), 
 
-        
         path.join('js', 'showdown.min.js'), 
         path.join('js', 'showdown-table.min.js'), 
         path.join('css','github-markdown.css'),

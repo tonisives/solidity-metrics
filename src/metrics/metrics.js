@@ -394,24 +394,6 @@ ${Object.keys(totals.totals.ast)
     <canvas id="chart-num-bar-ast"></canvas>
 </div>
 
-##### Inheritance Graph
-
-<a onclick="toggleVisibility('surya-inherit', this)">[➕]</a>
-<div id="surya-inherit" style="display:none">
-<div class="wrapper" style="max-width: 512px; margin: auto">
-    <div id="surya-inheritance" style="text-align: center;"></div> 
-</div>
-</div>
-
-##### CallGraph
-
-<a onclick="toggleVisibility('surya-call', this)">[➕]</a>
-<div id="surya-call" style="display:none">
-<div class="wrapper" style="max-width: 512px; margin: auto">
-    <div id="surya-callgraph" style="text-align: center;"></div>
-</div>
-</div>
-
 ###### Contract Summary
 
 <a onclick="toggleVisibility('surya-mdreport', this)">[➕]</a>
