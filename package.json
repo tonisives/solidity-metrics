@@ -32,6 +32,6 @@
     "glob": "^8.0.3",
     "sloc": "^0.3.0",
     "solidity-doppelganger": "^0.0.11",
-    "surya": "^0.4.6"
+    "surya": "^0.4.11"
   }
 }
