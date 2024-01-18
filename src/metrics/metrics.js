@@ -14,7 +14,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 const sloc = require('sloc');
 
-const surya = require('surya');
+// const surya = require('surya');
 const {SolidityDoppelganger} = require('solidity-doppelganger');
 
 
@@ -394,13 +394,6 @@ ${Object.keys(totals.totals.ast)
     <canvas id="chart-num-bar-ast"></canvas>
 </div>
 
-###### Contract Summary
-
-<a onclick="toggleVisibility('surya-mdreport', this)">[➕]</a>
-<div id="surya-mdreport" style="display:none">
-${suryamdreport} 
-
-</div>
 
 `; 
 
